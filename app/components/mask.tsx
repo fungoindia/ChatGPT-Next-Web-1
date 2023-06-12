@@ -53,7 +53,7 @@ export function MaskConfig(props: {
     props.updateMask((mask) => {
       mask.modelConfig = config;
       // if user changed current session mask, it will disable auto sync
-      mask.syncGlobalConfig = false;
+      mask.syncGlobalConfig = true;
     });
   };
 
