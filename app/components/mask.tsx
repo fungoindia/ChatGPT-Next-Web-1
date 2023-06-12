@@ -146,7 +146,7 @@ export function MaskConfig(props: {
 
       <List>
         <ModelConfigList
-          modelConfig={{ ...props.mask.modelConfig }}
+          modelConfig={{ ...globalConfig.modelConfig }}
           updateConfig={updateConfig}
         />
         {props.extraListItems}
