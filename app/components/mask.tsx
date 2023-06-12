@@ -44,11 +44,11 @@ export function MaskConfig(props: {
   shouldSyncFromGlobal?: boolean;
 }) {
   const [showPicker, setShowPicker] = useState(false);
-
+  const globalConfig = useAppConfig();
   const updateConfig = (updater: (config: ModelConfig) => void) => {
     if (props.readonly) return;
 
-    const config = { ...props.mask.modelConfig };
+    const config = { ...globalConfig.modelConfig };
     updater(config);
     props.updateMask((mask) => {
       mask.modelConfig = config;
@@ -57,7 +57,7 @@ export function MaskConfig(props: {
     });
   };
 
-  const globalConfig = useAppConfig();
+  
 
   return (
     <>
