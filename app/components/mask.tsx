@@ -67,6 +67,10 @@ export function MaskConfig(props: {
           const context = props.mask.context.slice();
           updater(context);
           props.updateMask((mask) => (mask.context = context));
+          props.updateMask((mask) => {
+                    mask.syncGlobalConfig = e.currentTarget.checked;
+                    mask.modelConfig = { ...globalConfig.modelConfig };
+          });
         }}
       />
 
