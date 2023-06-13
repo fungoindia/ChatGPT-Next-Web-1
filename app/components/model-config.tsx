@@ -35,6 +35,7 @@ export function ModelConfigList(props: {
       <ListItem
         title={Locale.Settings.Temperature.Title}
         subTitle={Locale.Settings.Temperature.SubTitle}
+        style={{display: "none"}}
       >
         <InputRange
           value={props.modelConfig.temperature?.toFixed(1)}
